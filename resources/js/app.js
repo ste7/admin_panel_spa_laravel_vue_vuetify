@@ -17,7 +17,8 @@ window.Vue = require('vue');
  * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
  */
 
-Vue.component('example-component', require('./app/components/ExampleComponent.vue'));
+Vue.component('side-bar', require('./app/components/templates/SideBar.vue'));
+Vue.component('modal-box', require('./app/components/templates/ModalBox.vue'));
 
 // const files = require.context('./', true, /\.vue$/i)
 
@@ -35,8 +36,8 @@ import App from './app/components/App.vue'
 import router from './app/router'
 import store from './app/vuex'
 import Vuetify from 'vuetify'
-// import 'vuetify/dist/vuetify.min.css'
-// import 'material-design-icons-iconfont/dist/material-design-icons.css'
+import 'vuetify/dist/vuetify.min.css'
+import 'material-design-icons-iconfont/dist/material-design-icons.css'
 
 Vue.use(Vuetify)
 
