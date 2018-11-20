@@ -6,6 +6,8 @@ import Signin from '../components/auth/Signin.vue'
 import Email from '../components/auth/password/Email.vue'
 import Reset from '../components/auth/password/Reset.vue'
 import Home from './../../app/components/Home.vue'
+import NotFound from './../components/404/NotFound.vue'
+import Profile from './../../app/components/Profile'
 
 Vue.use(VueRouter)
 
@@ -47,6 +49,19 @@ const router = new VueRouter({
             path: '/',
             name: 'home',
             component: Home,
+            meta: {
+                auth: true
+            }
+        },
+        {
+            path: '*',
+            name: 'notfound',
+            component: NotFound
+        },
+        {
+            path: '/profile',
+            name: 'profile',
+            component: Profile,
             meta: {
                 auth: true
             }
