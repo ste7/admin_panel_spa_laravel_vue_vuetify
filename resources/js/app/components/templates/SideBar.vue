@@ -115,10 +115,10 @@
                     ['Profile', 'person', '/profile'],
                 ],
                 web: [
-                    ['Articles', 'description', '/articles'],
-                    ['Ads', 'center_focus_strong', '/ads'],
-                    ['Questions', 'question_answer', '/questions'],
-                    ['Tags', 'local_offer', '/tags'],
+                    // ['Articles', 'description', '/articles'],
+                    // ['Ads', 'center_focus_strong', '/ads'],
+                    // ['Questions', 'question_answer', '/questions'],
+                    // ['Tags', 'local_offer', '/tags'],
                 ],
                 drop: [
                     { title: 'Sign Out' }

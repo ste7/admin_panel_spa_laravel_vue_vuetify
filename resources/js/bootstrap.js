@@ -44,6 +44,16 @@ if (token) {
  * allows your team to easily build robust real-time web applications.
  */
 
+window.fillForm = function(formArray, model, method = 'POST'){
+    let data = new FormData();
+    data.append('_method', method);
+    formArray.forEach(item => {
+        data.append(item, (model[`${item}`] != undefined && model[`${item}`] != '')? model[`${item}`] : '');
+    });
+    return data;
+};
+
+
 // import Echo from 'laravel-echo'
 
 // window.Pusher = require('pusher-js');

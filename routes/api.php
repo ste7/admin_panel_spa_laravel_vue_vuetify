@@ -16,3 +16,15 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::post('signup', 'Auth\SignUpController@signUp');
+
+Route::post('password/create', 'Auth\ResetPasswordController@create');
+Route::get('password/find/{token}', 'Auth\ResetPasswordController@find');
+Route::post('password/reset', 'Auth\ResetPasswordController@reset');
+
+Route::middleware('auth:api')->group(function(){
+    Route::get('me', 'UserController@me');
+    Route::post('password/update', 'UserController@updatePassword');
+    Route::post('user/update', 'UserController@updateUser');
+});
