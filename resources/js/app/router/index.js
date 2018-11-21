@@ -7,7 +7,7 @@ import Email from '../components/auth/password/Email.vue'
 import Reset from '../components/auth/password/Reset.vue'
 import Home from './../../app/components/Home.vue'
 import NotFound from './../components/404/NotFound.vue'
-import Profile from './../../app/components/Profile'
+import Profile from './../../app/components/Profile' 
 
 Vue.use(VueRouter)
 
